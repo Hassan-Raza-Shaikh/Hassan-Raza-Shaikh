@@ -10,7 +10,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 🌱 CURRENT FOCUS
+### Current Focus
 
 - 🤖 **Agentic Workflows**: Deepening my understanding of autonomous AI agents and language models.
 - 💻 **Full Stack**: Building responsive, typesafe web applications using React, Node.js, and TypeScript.
@@ -18,7 +18,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 🛠️ TECH STACK & TOOLS
+### Technologies & Tools
 
 <p align="left">
   <!-- Languages -->
@@ -37,7 +37,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 📂 FEATURED PROJECTS & CONTRIBUTIONS
+### Projects & Contributions
 
 <table>
   <tr>
@@ -75,7 +75,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 📊 TELEMETRY
+### Telemetry
 
 <p align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=Hassan-Raza-Shaikh&show_icons=true&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
@@ -89,15 +89,11 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 🚀 CONTRIBUTION DENSITY
-
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hassan-Raza-Shaikh&theme=react-dark&bg_color=0d1117&color=00f2fe&line=ff007f&point=00f2fe&area=true&hide_border=true" width="100%" />
 </p>
 
 ---
-
-### 🐍 COMMIT SNAKE
 
 <p align="center">
   <img src="assets/github-contribution-grid-snake-dark.svg" alt="Commit Snake" width="100%" style="border-radius: 8px;" />
@@ -105,15 +101,13 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
-### 🌆 3D CONTRIBUTION GRAPH
-
 <p align="center">
   <img src="profile-3d-contrib/profile-green-animate.svg" alt="3D Commit City" width="100%" style="border-radius: 8px;" />
 </p>
 
 ---
 
-### 📬 CONNECT WITH ME
+### Connect
 
 <p align="left">
   <a href="https://linkedin.com/in/Hassan-Raza-Shaikh" target="_blank">
