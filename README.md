@@ -97,6 +97,14 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
+### 🐍 COMMIT SNAKE
+
+<p align="center">
+  <img src="assets/github-contribution-grid-snake-dark.svg" alt="Commit Snake" width="100%" style="border-radius: 8px;" />
+</p>
+
+---
+
 ### 🌆 3D CONTRIBUTION GRAPH
 
 <p align="center">
