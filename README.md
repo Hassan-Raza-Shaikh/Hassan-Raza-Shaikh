@@ -10,6 +10,14 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
 
 ---
 
+### 🌱 CURRENT FOCUS
+
+- 🤖 **Agentic Workflows**: Deepening my understanding of autonomous AI agents and language models.
+- 💻 **Full Stack**: Building responsive, typesafe web applications using React, Node.js, and TypeScript.
+- 📈 **Core Computer Science**: Practicing advanced algorithms and system design principles.
+
+---
+
 ### 🛠️ TECH STACK & TOOLS
 
 <p align="left">
@@ -28,6 +36,32 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
 
 ---
 
+### 📂 FEATURED PROJECTS
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b>🌐 <a href="https://github.com/Hassan-Raza-Shaikh/Portfolio">Portfolio</a></b><br/>
+      My personal portfolio website showcasing developer experience, built with modern web technologies.<br/>
+      <code>React</code> <code>TypeScript</code> <code>CSS3</code>
+    </td>
+    <td width="50%" valign="top">
+      <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
+      A public repository hub built for sharing and accessing university course resources and materials.<br/>
+      <code>HTML5</code> <code>JavaScript</code> <code>Markdown</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/CS112-Project">CS112 Project</a></b><br/>
+      Core implementation files, algorithms, and data structures from CS112 coursework.<br/>
+      <code>C++</code> <code>Algorithms</code>
+    </td>
+  </tr>
+</table>
+
+---
+
 ### 📊 TELEMETRY
 
 <p align="center">
@@ -38,6 +72,14 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hassan-Raza-Shaikh&theme=radical&background=0d1117&border=00f2fe&stroke=ff007f&ring=00f2fe&fire=ff007f&currStreakLabel=00f2fe" height="195" />
+</p>
+
+---
+
+### 🚀 CONTRIBUTION DENSITY
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hassan-Raza-Shaikh&theme=react-dark&bg_color=0d1117&color=00f2fe&line=ff007f&point=00f2fe&area=true&hide_border=true" width="100%" />
 </p>
 
 ---
