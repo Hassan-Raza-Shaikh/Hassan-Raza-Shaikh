@@ -86,9 +86,7 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hassan-Raza-Shaikh&theme=radical&background=0d1117&border=00f2fe&stroke=ff007f&ring=00f2fe&fire=ff007f&currStreakLabel=00f2fe" height="195" />
 </p>
 
-<p align="center">
-  <img src="https://github-stats-extended.vercel.app/api/wakatime?username=Hassan-Raza-Shaikh&theme=radical&layout=compact&bg_color=0d1117&border_color=00f2fe&title_color=00f2fe&text_color=fff" height="195" />
-</p>
+
 
 ---
 
