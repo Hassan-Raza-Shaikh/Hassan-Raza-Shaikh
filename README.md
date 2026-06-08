@@ -38,12 +38,14 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 #### Frameworks & Libraries
 <!-- START_SECTION:frameworks -->
 <p align="left">
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" height="40" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" height="40" />
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" height="40" />
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" height="40" />
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" height="40" />
+  <br/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" height="40" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" height="40" />
-  <br/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" height="40" />
 </p>
 <!-- END_SECTION:frameworks -->
@@ -51,8 +53,19 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 #### AI & Data Science
 <!-- START_SECTION:ai_data_science -->
 <p align="left">
+  <img src="https://img.shields.io/badge/CatBoost-F50057?style=for-the-badge&logo=python&logoColor=white" alt="CatBoost" height="40" />
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" height="40" />
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" height="40" />
+  <img src="https://img.shields.io/badge/LightGBM-008080?style=for-the-badge&logo=python&logoColor=white" alt="LightGBM" height="40" />
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib" height="40" />
+  <br/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" height="40" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" height="40" />
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" height="40" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="scikit-learn" height="40" />
+  <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=python&logoColor=white" alt="Seaborn" height="40" />
+  <br/>
+  <img src="https://img.shields.io/badge/XGBoost-1E88E5?style=for-the-badge&logo=python&logoColor=white" alt="XGBoost" height="40" />
 </p>
 <!-- END_SECTION:ai_data_science -->
 
