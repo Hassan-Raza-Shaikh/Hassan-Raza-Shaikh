@@ -33,10 +33,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Update Projects List in README
+        run: |
+          python3 update_readme.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit & Push Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/ profile-3d-contrib/
-          git commit -m "chore: update daily contribution metrics [skip ci]" || echo "No changes to commit"
+          git add assets/ profile-3d-contrib/ README.md
+          git commit -m "chore: update daily contribution metrics and projects [skip ci]" || echo "No changes to commit"
           git push

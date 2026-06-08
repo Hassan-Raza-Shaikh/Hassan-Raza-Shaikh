@@ -39,39 +39,42 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ### Projects & Contributions
 
+<!-- START_SECTION:projects -->
 <table>
   <tr>
     <td width="50%" valign="top">
       <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
-      A public repository hub built for sharing and accessing university course resources and materials.<br/>
-      <code>HTML5</code> <code>JavaScript</code> <code>Markdown</code>
+      A public resource hub built for sharing and accessing university course materials.<br/>
+      <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
       <b>🤖 <a href="https://github.com/hamxa296/ML-Project-hehe">ML Project</a></b> <i>(Contributor)</i><br/>
-      Collaborating on machine learning implementations, data analysis pipelines, and evaluation models.<br/>
-      <code>Python</code> <code>Machine Learning</code>
+      Collaborating on machine learning models, data analysis pipelines, and evaluation metrics.<br/>
+      <code>HTML</code>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b>📁 <a href="https://github.com/Hassan-Raza-Shaikh/Projects">Projects</a></b><br/>
-      A collection of personal software projects and source implementations.<br/>
-      <code>C++</code> <code>Algorithms</code>
+      <b>🌱 <a href="https://github.com/ZainJ5/Plant-Growth-and-Harvesting-Monitoring-System">Plant Growth & Harvesting Monitoring System</a></b> <i>(Contributor)</i><br/>
+      An IoT and computer vision monitoring system for tracking crop health and growth cycles.<br/>
+      <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
-      <b>🐍 <a href="https://github.com/Hassan-Raza-Shaikh/Python">Python</a></b><br/>
-      A repository of Python utility scripts and development tests.<br/>
-      <code>Python</code> <code>Data Analysis</code>
+      <b>📁 <a href="https://github.com/Hassan-Raza-Shaikh/Projects">Projects</a></b><br/>
+      This contains large project files<br/>
+      <code>C++</code>
     </td>
+  </tr>
   </tr>
   <tr>
     <td colspan="2" valign="top">
-      <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/CS112-Project">CS112 Project</a></b><br/>
-      Core implementation files, data structures, and algorithmic solutions from CS112 coursework.<br/>
-      <code>C++</code> <code>Algorithms</code>
+      <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/Python">Python Utilities</a></b><br/>
+      Python codes<br/>
+      <code>Jupyter Notebook</code>
     </td>
   </tr>
 </table>
+<!-- END_SECTION:projects -->
 
 ---
 
