@@ -87,6 +87,31 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 ---
 
+### Featured Live Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b>📚 <a href="https://frontend-xi-pink-10.vercel.app">GIKI Course Hub</a></b><br/>
+      Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
+      <br/>
+      <a href="https://frontend-xi-pink-10.vercel.app" target="_blank">
+        <img src="https://img.shields.io/badge/Live_Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Deployment" height="30" />
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <b>🎮 <a href="https://halvapuri.github.io/courses/">Wordlines</a></b><br/>
+      An interactive logic game/graph implementation for pathfinding visualisations and word search grid navigation.<br/>
+      <br/>
+      <a href="https://halvapuri.github.io/courses/" target="_blank">
+        <img src="https://img.shields.io/badge/Live_Deployment-24292E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Deployment" height="30" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
+
 ### Projects & Contributions
 
 <!-- START_SECTION:projects -->
