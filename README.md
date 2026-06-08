@@ -14,8 +14,14 @@
 
 ### 🌐 SYSTEM STATUS
 
-```json
-{
+<div style="background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 16px; font-family: monospace; max-width: 550px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+  <div style="display: flex; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #21262d; padding-bottom: 8px;">
+    <span style="height: 12px; width: 12px; background-color: #ff5f56; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+    <span style="height: 12px; width: 12px; background-color: #ffbd2e; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+    <span style="height: 12px; width: 12px; background-color: #27c93f; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+    <span style="color: #8b949e; font-size: 13px; margin-left: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">session: hassan@status.json</span>
+  </div>
+  <pre style="margin: 0; background: transparent; border: none; padding: 0; color: #c9d1d9; font-size: 14px; line-height: 1.5; text-align: left;"><code>{
   "username": "Hassan-Raza-Shaikh",
   "identity": "Developer & Tech Innovator",
   "operating_system": "macOS (Apple Silicon)",
@@ -25,8 +31,8 @@
     "Orchestrating agentic workflows",
     "Exploring advanced AI models"
   ]
-}
-```
+}</code></pre>
+</div>
 
 ---
 
@@ -80,6 +86,26 @@
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hassan-Raza-Shaikh&theme=radical&background=0d1117&border=00f2fe&stroke=ff007f&ring=00f2fe&fire=ff007f&currStreakLabel=00f2fe" height="195" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Hassan-Raza-Shaikh&theme=radical&layout=compact&bg_color=0d1117&border_color=00f2fe&title_color=00f2fe&text_color=fff" height="195" />
+</p>
+
+---
+
+### 🌆 COMMIT CITY (3D CONTRIBUTION GRAPH)
+
+<p align="center">
+  <img src="profile-3d-contrib/profile-green-animate.svg" alt="3D Commit City" width="100%" style="border-radius: 8px;" />
+</p>
+
+---
+
+### 🐍 COMMIT SNAKE
+
+<p align="center">
+  <img src="assets/github-contribution-grid-snake-dark.svg" alt="Commit Snake" width="100%" style="border-radius: 8px;" />
 </p>
 
 ---
