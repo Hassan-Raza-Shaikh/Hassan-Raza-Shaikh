@@ -91,7 +91,15 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="33%" valign="top">
+      <b>🌐 <a href="https://hassan-portfolio-gold.vercel.app">Personal Portfolio</a></b><br/>
+      My developer portfolio site showcasing active academic projects, development timeline, and technical competencies.<br/>
+      <br/>
+      <a href="https://hassan-portfolio-gold.vercel.app" target="_blank">
+        <img src="https://img.shields.io/badge/Live_Deployment-0066FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Deployment" height="30" />
+      </a>
+    </td>
+    <td width="33%" valign="top">
       <b>📚 <a href="https://frontend-xi-pink-10.vercel.app">GIKI Course Hub</a></b><br/>
       Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
       <br/>
@@ -99,12 +107,12 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
         <img src="https://img.shields.io/badge/Live_Deployment-FFCC00?style=for-the-badge&logo=vercel&logoColor=black" alt="Vercel Deployment" height="30" />
       </a>
     </td>
-    <td width="50%" valign="top">
+    <td width="33%" valign="top">
       <b>🎮 <a href="https://halvapuri.github.io/courses/">Wordlines</a></b><br/>
       An interactive logic game/graph implementation for pathfinding visualisations and word search grid navigation.<br/>
       <br/>
       <a href="https://halvapuri.github.io/courses/" target="_blank">
-        <img src="https://img.shields.io/badge/Live_Deployment-0066FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Deployment" height="30" />
+        <img src="https://img.shields.io/badge/Live_Deployment-FF3366?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Deployment" height="30" />
       </a>
     </td>
   </tr>
@@ -190,6 +198,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 <p align="left">
   <a href="https://www.linkedin.com/in/hassan-shaikh-36a744284/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0066FF?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="40" />
+  </a>
+  &nbsp;
+  <a href="https://hassan-portfolio-gold.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-FFCC00?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio" height="40" />
   </a>
   &nbsp;
   <a href="mailto:hassan.raza.shaikh.hrs@gmail.com">
