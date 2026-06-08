@@ -119,19 +119,19 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   <tr>
     <td width="50%" valign="top">
       <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
-      A public resource hub built for sharing and accessing university course materials.<br/>
+      Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
       <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
       <b>🤖 <a href="https://github.com/hamxa296/ML-Project-hehe">ML Project</a></b> <i>(Contributor)</i><br/>
-      Collaborating on machine learning models, data analysis pipelines, and evaluation metrics.<br/>
+      Collaborative machine learning pipeline implementing credit fraud detection and model ensemble comparisons.<br/>
       <code>HTML</code>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <b>🌱 <a href="https://github.com/ZainJ5/Plant-Growth-and-Harvesting-Monitoring-System">Plant Growth & Harvesting Monitoring System</a></b> <i>(Contributor)</i><br/>
-      An IoT and computer vision monitoring system for tracking crop health and growth cycles.<br/>
+      An IoT and computer vision monitoring system designed for tracking crop health metrics and harvesting cycles.<br/>
       <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
