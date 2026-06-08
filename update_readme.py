@@ -20,23 +20,23 @@ REPOS = [
 REPO_META = {
     "Hassan-Raza-Shaikh/giki_course_hub-1": {
         "title": "GIKI Course Hub",
-        "description": "A public resource hub built for sharing and accessing university course materials."
+        "description": "Our university academic resource platform, providing course material sharing and management. Currently live and actively used."
     },
     "hamxa296/ML-Project-hehe": {
         "title": "ML Project",
-        "description": "Collaborating on machine learning models, data analysis pipelines, and evaluation metrics."
+        "description": "Collaborative machine learning pipeline implementing credit fraud detection and model ensemble comparisons."
     },
     "ZainJ5/Plant-Growth-and-Harvesting-Monitoring-System": {
         "title": "Plant Growth & Harvesting Monitoring System",
-        "description": "An IoT and computer vision monitoring system for tracking crop health and growth cycles."
+        "description": "An IoT and computer vision monitoring system designed for tracking crop health metrics and harvesting cycles."
     },
     "Hassan-Raza-Shaikh/Projects": {
         "title": "Projects",
-        "description": "A collection of personal software implementations and academic assignments."
+        "description": "Academic software developments, data structures implementations, and core computational logic systems."
     },
     "Hassan-Raza-Shaikh/Python": {
         "title": "Python Utilities",
-        "description": "A repository of Python scripts, utility tools, and developmental playground tests."
+        "description": "A curated playground of Python implementations, scripting utilities, and numerical analysis models."
     }
 }
 

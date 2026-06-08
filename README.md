@@ -2,7 +2,7 @@
 
 <p align="left">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00F2FE&width=450&lines=Hassan+Raza+Shaikh;AI+Student;Mathematics+Enthusiast" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=FFCC00&width=450&lines=Hassan+Raza+Shaikh;AI+Student;Mathematics+Enthusiast" alt="Typing SVG" />
   </a>
 </p>
 
@@ -96,7 +96,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
       <br/>
       <a href="https://frontend-xi-pink-10.vercel.app" target="_blank">
-        <img src="https://img.shields.io/badge/Live_Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Deployment" height="30" />
+        <img src="https://img.shields.io/badge/Live_Deployment-FFCC00?style=for-the-badge&logo=vercel&logoColor=black" alt="Vercel Deployment" height="30" />
       </a>
     </td>
     <td width="50%" valign="top">
@@ -104,7 +104,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       An interactive logic game/graph implementation for pathfinding visualisations and word search grid navigation.<br/>
       <br/>
       <a href="https://halvapuri.github.io/courses/" target="_blank">
-        <img src="https://img.shields.io/badge/Live_Deployment-24292E?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Deployment" height="30" />
+        <img src="https://img.shields.io/badge/Live_Deployment-0066FF?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Deployment" height="30" />
       </a>
     </td>
   </tr>
@@ -156,19 +156,19 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 ### Telemetry
 
 <p align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=Hassan-Raza-Shaikh&show_icons=true&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
+  <img src="https://github-stats-extended.vercel.app/api?username=Hassan-Raza-Shaikh&show_icons=true&title_color=FF3366&text_color=FFFFFF&icon_color=FFCC00&border_color=0066FF&bg_color=0d1117" height="195" />
   &nbsp;&nbsp;
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Hassan-Raza-Shaikh&layout=compact&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Hassan-Raza-Shaikh&layout=compact&title_color=FF3366&text_color=FFFFFF&icon_color=FFCC00&border_color=0066FF&bg_color=0d1117" height="195" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hassan-Raza-Shaikh&theme=radical&background=0d1117&border=00f2fe&stroke=ff007f&ring=00f2fe&fire=ff007f&currStreakLabel=00f2fe" height="195" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Hassan-Raza-Shaikh&theme=radical&background=0d1117&border=0066FF&stroke=FF3366&ring=FFCC00&fire=FF3366&currStreakLabel=FFCC00" height="195" />
 </p>
 
 ---
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hassan-Raza-Shaikh&theme=react-dark&bg_color=0d1117&color=00f2fe&line=ff007f&point=00f2fe&area=true&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hassan-Raza-Shaikh&theme=react-dark&bg_color=0d1117&color=FF3366&line=0066FF&point=FFCC00&area=true&hide_border=true" width="100%" />
 </p>
 
 ---
@@ -189,10 +189,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 
 <p align="left">
   <a href="https://www.linkedin.com/in/hassan-shaikh-36a744284/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="40" />
+    <img src="https://img.shields.io/badge/LinkedIn-0066FF?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="40" />
   </a>
   &nbsp;
   <a href="mailto:hassan.raza.shaikh.hrs@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" height="40" />
+    <img src="https://img.shields.io/badge/Email-FF3366?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" height="40" />
   </a>
 </p>
