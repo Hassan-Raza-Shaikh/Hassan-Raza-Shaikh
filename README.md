@@ -2,11 +2,11 @@
 
 <p align="left">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00F2FE&width=450&lines=Hassan+Raza+Shaikh;AI+Enthusiast;CS+Student" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00F2FE&width=450&lines=Hassan+Raza+Shaikh;AI+Student;Mathematics+Enthusiast" alt="Typing SVG" />
   </a>
 </p>
 
-Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on software development, AI integrations, and exploring new tech frontiers.
+Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I focus on machine learning integrations, software development, and exploring core computational frameworks.
 
 ---
 
@@ -14,7 +14,7 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
 
 - 🤖 **Agentic Workflows**: Deepening my understanding of autonomous AI agents and language models.
 - 💻 **Full Stack**: Building responsive, typesafe web applications using React, Node.js, and TypeScript.
-- 📈 **Core Computer Science**: Practicing advanced algorithms and system design principles.
+- 📐 **Mathematics & AI**: Studying advanced linear algebra, calculus, and neural network foundations.
 
 ---
 
@@ -25,6 +25,7 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
   <!-- Frameworks & Runtimes -->
@@ -36,25 +37,37 @@ Hi! I'm Hassan, a Computer Science student and AI enthusiast. I focus on softwar
 
 ---
 
-### 📂 FEATURED PROJECTS
+### 📂 FEATURED PROJECTS & CONTRIBUTIONS
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <b>🌐 <a href="https://github.com/Hassan-Raza-Shaikh/Portfolio">Portfolio</a></b><br/>
-      My personal portfolio website showcasing developer experience, built with modern web technologies.<br/>
-      <code>React</code> <code>TypeScript</code> <code>CSS3</code>
-    </td>
     <td width="50%" valign="top">
       <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
       A public repository hub built for sharing and accessing university course resources and materials.<br/>
       <code>HTML5</code> <code>JavaScript</code> <code>Markdown</code>
     </td>
+    <td width="50%" valign="top">
+      <b>🤖 <a href="https://github.com/hamxa296/ML-Project-hehe">ML Project</a></b> <i>(Contributor)</i><br/>
+      Collaborating on machine learning implementations, data analysis pipelines, and evaluation models.<br/>
+      <code>Python</code> <code>Machine Learning</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b>📁 <a href="https://github.com/Hassan-Raza-Shaikh/Projects">Projects</a></b><br/>
+      A collection of personal software projects and source implementations.<br/>
+      <code>C++</code> <code>Algorithms</code>
+    </td>
+    <td width="50%" valign="top">
+      <b>🐍 <a href="https://github.com/Hassan-Raza-Shaikh/Python">Python</a></b><br/>
+      A repository of Python utility scripts and development tests.<br/>
+      <code>Python</code> <code>Data Analysis</code>
+    </td>
   </tr>
   <tr>
     <td colspan="2" valign="top">
       <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/CS112-Project">CS112 Project</a></b><br/>
-      Core implementation files, algorithms, and data structures from CS112 coursework.<br/>
+      Core implementation files, data structures, and algorithmic solutions from CS112 coursework.<br/>
       <code>C++</code> <code>Algorithms</code>
     </td>
   </tr>
