@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00F2FE&width=450&center=true&vCenter=true&lines=DEVELOPING+AUTONOMOUS+AGENTS...;BUILDING+THE+FUTURE+OF+WEB...;EXPLORING+NEW+FRONTIERS..." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3500&pause=1000&color=00F2FE&width=450&center=true&vCenter=true&lines=Software+Engineer;Full+Stack+Developer;AI+Integrations" alt="Typing SVG" />
   </a>
 </p>
 
@@ -23,13 +23,11 @@
   </div>
   <pre style="margin: 0; background: transparent; border: none; padding: 0; color: #c9d1d9; font-size: 14px; line-height: 1.5; text-align: left;"><code>{
   "username": "Hassan-Raza-Shaikh",
-  "identity": "Developer & Tech Innovator",
   "operating_system": "macOS (Apple Silicon)",
-  "caffeine_level": "98%",
-  "active_directives": [
-    "Building high-performance interfaces",
-    "Orchestrating agentic workflows",
-    "Exploring advanced AI models"
+  "directives": [
+    "Full Stack Web Development",
+    "Agentic AI Workflows",
+    "Systems Integration"
   ]
 }</code></pre>
 </div>
@@ -79,9 +77,9 @@
 ### 📊 REAL-TIME TELEMETRY
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Hassan-Raza-Shaikh&show_icons=true&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
+  <img src="https://github-stats-extended.vercel.app/api?username=Hassan-Raza-Shaikh&show_icons=true&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hassan-Raza-Shaikh&layout=compact&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Hassan-Raza-Shaikh&layout=compact&theme=radical&title_color=00f2fe&text_color=fff&icon_color=ff007f&border_color=00f2fe&bg_color=0d1117" height="195" />
 </p>
 
 <p align="center">
@@ -89,7 +87,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Hassan-Raza-Shaikh&theme=radical&layout=compact&bg_color=0d1117&border_color=00f2fe&title_color=00f2fe&text_color=fff" height="195" />
+  <img src="https://github-stats-extended.vercel.app/api/wakatime?username=Hassan-Raza-Shaikh&theme=radical&layout=compact&bg_color=0d1117&border_color=00f2fe&title_color=00f2fe&text_color=fff" height="195" />
 </p>
 
 ---
@@ -106,10 +104,4 @@
 
 <p align="center">
   <img src="assets/github-contribution-grid-snake-dark.svg" alt="Commit Snake" width="100%" style="border-radius: 8px;" />
-</p>
-
----
-
-<p align="center">
-  <i>"The best way to predict the future is to build it."</i>
 </p>
