@@ -197,9 +197,9 @@ BADGE_MAPPING = {
 CATEGORIES = {
     "languages": ["python", "c++", "cplusplus", "c", "r", "javascript", "js", "typescript", "ts", "html", "html5", "css", "css3", "sql", "postgresql", "postgres", "sqlite", "mysql", "latex", "tex", "shell", "bash", "makefile", "java", "go", "rust"],
     "frameworks": ["react", "reactjs", "next.js", "nextjs", "node.js", "nodejs", "flask", "fastapi", "express", "expressjs", "tailwind css", "tailwind", "bootstrap", "vite", "arduino", "esp32", "django"],
-    "ai_data_science": ["pytorch", "tensorflow", "scikit-learn", "sklearn", "numpy", "pandas", "opencv", "matplotlib", "seaborn", "jupyter", "jupyter notebook", "xgboost", "lightgbm", "catboost", "scipy"],
+    "ai_data_science": ["pytorch", "tensorflow", "scikit-learn", "sklearn", "numpy", "pandas", "opencv", "matplotlib", "seaborn", "jupyter", "jupyter notebook", "xgboost", "lightgbm", "catboost", "scipy", "evidently"],
     "cloud_db": ["firebase", "aws", "vercel", "mongodb", "heroku"],
-    "tools_devops": ["git", "github actions", "docker", "cmake", "quarto"]
+    "tools_devops": ["git", "github actions", "docker", "cmake", "quarto", "pytest", "prefect"]
 }
 
 # Standardized names for displaying
@@ -242,7 +242,8 @@ TECH_DISPLAY_NAMES = {
     
     "firebase": "Firebase", "aws": "AWS", "vercel": "Vercel", "mongodb": "MongoDB", "heroku": "Heroku",
     
-    "git": "Git", "github actions": "GitHub Actions", "docker": "Docker", "cmake": "CMake", "quarto": "Quarto"
+    "git": "Git", "github actions": "GitHub Actions", "docker": "Docker", "cmake": "CMake", "quarto": "Quarto",
+    "pytest": "Pytest", "prefect": "Prefect", "evidently": "Evidently"
 }
 
 detected_tech = set()
@@ -258,6 +259,7 @@ IGNORED_DIRS = {
 repos_to_scan = []
 
 # Fetch user's own repositories
+fetched_repos = False
 try:
     url = f"https://api.github.com/users/{username}/repos?per_page=100"
     res = requests.get(url, headers=headers, timeout=5)
@@ -271,10 +273,29 @@ try:
                     "default_branch": r.get("default_branch", "main"),
                     "language": r.get("language")
                 })
+        fetched_repos = True
     else:
         print(f"Failed to fetch repositories list: {res.status_code}")
 except Exception as e:
     print(f"Error listing user repos: {e}")
+
+if not fetched_repos:
+    print("Falling back to local directory listing for user repositories...")
+    try:
+        # List sibling directories in parent directory (Projects folder)
+        parent_dir = ".."
+        if os.path.isdir(parent_dir):
+            for item in os.listdir(parent_dir):
+                item_path = os.path.join(parent_dir, item)
+                if os.path.isdir(item_path) and not item.startswith(".") and item != "Hassan-Raza-Shaikh":
+                    repos_to_scan.append({
+                        "owner": username,
+                        "name": item,
+                        "default_branch": "main",
+                        "language": None
+                    })
+    except Exception as e:
+        print(f"Error scanning local parent directories: {e}")
 
 # Append the external featured contributions
 for ext_repo in ["hamxa296/ML-Project-hehe", "ZainJ5/Plant-Growth-and-Harvesting-Monitoring-System"]:
@@ -312,115 +333,216 @@ for repo in repos_to_scan:
         detected_tech.add("next.js")
         detected_tech.add("node.js")
         
-    # 3. Recursive Tree Scan
-    try:
-        tree_url = f"https://api.github.com/repos/{owner}/{name}/git/trees/{branch}?recursive=1"
-        res = requests.get(tree_url, headers=headers, timeout=5)
-        if res.status_code == 200:
-            tree_data = res.json()
-            tree = tree_data.get("tree", [])
-            
-            file_paths = []
-            has_github_actions = False
-            for item in tree:
-                if item["type"] == "blob":
-                    path = item["path"]
-                    parts = path.split("/")
-                    # Optimization: Skip ignored directories and hidden folders
-                    skip = False
-                    for p in parts[:-1]:
-                        if p in IGNORED_DIRS or p.startswith("."):
-                            skip = True
-                            break
-                    if skip:
-                        continue
-                        
-                    file_paths.append(path)
-                    if ".github/workflows" in path:
+    # 3. Scan files (either locally if directory exists, or via GitHub API as fallback)
+    local_path = f"../{name}"
+    scanned_locally = False
+    file_paths = []
+    has_github_actions = False
+    
+    if os.path.isdir(local_path):
+        print(f"Scanning locally at {local_path}...")
+        try:
+            for root, dirs, files in os.walk(local_path):
+                # prune ignored directories in-place
+                dirs[:] = [d for d in dirs if d not in IGNORED_DIRS and not d.startswith(".")]
+                for file in files:
+                    full_file_path = os.path.join(root, file)
+                    rel_path = os.path.relpath(full_file_path, local_path)
+                    file_paths.append(rel_path)
+                    if ".github/workflows" in rel_path:
                         has_github_actions = True
-                        
-            if has_github_actions:
-                detected_tech.add("github actions")
-                
-            # Scan files (limit package.json/requirements.txt fetches to max 3 per repo to be fast)
-            pjs_count = 0
-            req_count = 0
+            scanned_locally = True
+        except Exception as e:
+            print(f"Error scanning local files at {local_path}: {e}")
             
-            for path in file_paths:
-                parts = path.split("/")
-                filename = parts[-1]
-                filename_lower = filename.lower()
+    if not scanned_locally:
+        try:
+            tree_url = f"https://api.github.com/repos/{owner}/{name}/git/trees/{branch}?recursive=1"
+            res = requests.get(tree_url, headers=headers, timeout=5)
+            if res.status_code == 200:
+                tree_data = res.json()
+                tree = tree_data.get("tree", [])
                 
-                # Check extensions / files
-                if filename_lower == "package.json" and pjs_count < 3:
-                    pjs_count += 1
-                    raw_url = f"https://raw.githubusercontent.com/{owner}/{name}/{branch}/{path}"
-                    try:
-                        pjs_res = requests.get(raw_url, timeout=5)
-                        if pjs_res.status_code == 200:
-                            pjs = pjs_res.json()
-                            deps = {**pjs.get("dependencies", {}), **pjs.get("devDependencies", {})}
-                            deps_lower = {k.lower(): v for k, v in deps.items()}
+                for item in tree:
+                    if item["type"] == "blob":
+                        path = item["path"]
+                        parts = path.split("/")
+                        skip = False
+                        for p in parts[:-1]:
+                            if p in IGNORED_DIRS or p.startswith("."):
+                                skip = True
+                                break
+                        if skip:
+                            continue
                             
-                            if "react" in deps_lower: detected_tech.add("react")
-                            if "next" in deps_lower: detected_tech.add("next.js")
-                            if "tailwindcss" in deps_lower: detected_tech.add("tailwind css")
-                            if "bootstrap" in deps_lower: detected_tech.add("bootstrap")
-                            if "typescript" in deps_lower: detected_tech.add("typescript")
-                            if "express" in deps_lower: detected_tech.add("express")
-                            if "mongodb" in deps_lower: detected_tech.add("mongodb")
-                            if "pg" in deps_lower or "postgres" in deps_lower: detected_tech.add("postgresql")
-                            if "mysql" in deps_lower: detected_tech.add("mysql")
-                            if "firebase" in deps_lower or "firebase-admin" in deps_lower: detected_tech.add("firebase")
-                            if "vite" in deps_lower: detected_tech.add("vite")
-                    except Exception as e:
-                        print(f"Error parsing package.json in {owner}/{name}/{path}: {e}")
-                            
-                elif filename_lower == "requirements.txt" and req_count < 3:
-                    req_count += 1
-                    raw_url = f"https://raw.githubusercontent.com/{owner}/{name}/{branch}/{path}"
-                    try:
-                        req_res = requests.get(raw_url, timeout=5)
-                        if req_res.status_code == 200:
-                            req_text = req_res.text.lower()
-                            if "numpy" in req_text: detected_tech.add("numpy")
-                            if "pandas" in req_text: detected_tech.add("pandas")
-                            if "scikit-learn" in req_text or "sklearn" in req_text: detected_tech.add("scikit-learn")
-                            if "tensorflow" in req_text: detected_tech.add("tensorflow")
-                            if "torch" in req_text or "pytorch" in req_text: detected_tech.add("pytorch")
-                            if "xgboost" in req_text: detected_tech.add("xgboost")
-                            if "lightgbm" in req_text: detected_tech.add("lightgbm")
-                            if "catboost" in req_text: detected_tech.add("catboost")
-                            if "opencv-python" in req_text or "opencv" in req_text or "cv2" in req_text: detected_tech.add("opencv")
-                            if "matplotlib" in req_text: detected_tech.add("matplotlib")
-                            if "seaborn" in req_text: detected_tech.add("seaborn")
-                            if "flask" in req_text: detected_tech.add("flask")
-                            if "fastapi" in req_text: detected_tech.add("fastapi")
-                            if "firebase-admin" in req_text: detected_tech.add("firebase")
-                            if "boto3" in req_text: detected_tech.add("aws")
-                            if "jupyter" in req_text: detected_tech.add("jupyter")
-                            if "prefect" in req_text: detected_tech.add("prefect")
-                            if "evidently" in req_text: detected_tech.add("evidently")
-                            if "pytest" in req_text: detected_tech.add("pytest")
-                            if "scipy" in req_text: detected_tech.add("scipy")
-                    except Exception as e:
-                        print(f"Error parsing requirements.txt in {owner}/{name}/{path}: {e}")
+                        file_paths.append(path)
+                        if ".github/workflows" in path:
+                            has_github_actions = True
+            else:
+                print(f"Failed to fetch tree for {owner}/{name}: {res.status_code}")
+        except Exception as e:
+            print(f"Error scanning tree for {owner}/{name}: {e}")
+            
+    if has_github_actions:
+        detected_tech.add("github actions")
+        
+    # Scan files (limit package.json/requirements.txt fetches to max 3 per repo to be fast)
+    pjs_count = 0
+    req_count = 0
+    
+    for path in file_paths:
+        filename = os.path.basename(path)
+        filename_lower = filename.lower()
+        
+        # Check extensions / files
+        if filename_lower == "package.json" and pjs_count < 3:
+            pjs_count += 1
+            if scanned_locally:
+                try:
+                    import json
+                    with open(os.path.join(local_path, path), "r", encoding="utf-8", errors="ignore") as f:
+                        pjs = json.load(f)
+                        deps = {**pjs.get("dependencies", {}), **pjs.get("devDependencies", {})}
+                        deps_lower = {k.lower(): v for k, v in deps.items()}
                         
-                elif filename_lower == "cmakelists.txt":
-                    detected_tech.add("cmake")
-                elif filename_lower == "vercel.json":
-                    detected_tech.add("vercel")
-                elif filename_lower.endswith(".ino") or filename_lower == "platformio.ini":
-                    detected_tech.add("arduino")
-                elif filename_lower.endswith(".qmd") or filename_lower == "_quarto.yml":
-                    detected_tech.add("quarto")
-                elif filename_lower.endswith(".tex"):
-                    detected_tech.add("latex")
+                        if "react" in deps_lower: detected_tech.add("react")
+                        if "next" in deps_lower: detected_tech.add("next.js")
+                        if "tailwindcss" in deps_lower: detected_tech.add("tailwind css")
+                        if "bootstrap" in deps_lower: detected_tech.add("bootstrap")
+                        if "typescript" in deps_lower: detected_tech.add("typescript")
+                        if "express" in deps_lower: detected_tech.add("express")
+                        if "mongodb" in deps_lower: detected_tech.add("mongodb")
+                        if "pg" in deps_lower or "postgres" in deps_lower: detected_tech.add("postgresql")
+                        if "mysql" in deps_lower: detected_tech.add("mysql")
+                        if "firebase" in deps_lower or "firebase-admin" in deps_lower: detected_tech.add("firebase")
+                        if "vite" in deps_lower: detected_tech.add("vite")
+                except Exception as e:
+                    print(f"Error parsing local package.json: {e}")
+            else:
+                raw_url = f"https://raw.githubusercontent.com/{owner}/{name}/{branch}/{path}"
+                try:
+                    pjs_res = requests.get(raw_url, timeout=5)
+                    if pjs_res.status_code == 200:
+                        pjs = pjs_res.json()
+                        deps = {**pjs.get("dependencies", {}), **pjs.get("devDependencies", {})}
+                        deps_lower = {k.lower(): v for k, v in deps.items()}
+                        
+                        if "react" in deps_lower: detected_tech.add("react")
+                        if "next" in deps_lower: detected_tech.add("next.js")
+                        if "tailwindcss" in deps_lower: detected_tech.add("tailwind css")
+                        if "bootstrap" in deps_lower: detected_tech.add("bootstrap")
+                        if "typescript" in deps_lower: detected_tech.add("typescript")
+                        if "express" in deps_lower: detected_tech.add("express")
+                        if "mongodb" in deps_lower: detected_tech.add("mongodb")
+                        if "pg" in deps_lower or "postgres" in deps_lower: detected_tech.add("postgresql")
+                        if "mysql" in deps_lower: detected_tech.add("mysql")
+                        if "firebase" in deps_lower or "firebase-admin" in deps_lower: detected_tech.add("firebase")
+                        if "vite" in deps_lower: detected_tech.add("vite")
+                except Exception as e:
+                    print(f"Error parsing package.json in {owner}/{name}/{path}: {e}")
                     
-        else:
-            print(f"Failed to fetch tree for {owner}/{name}: {res.status_code}")
-    except Exception as e:
-        print(f"Error scanning tree for {owner}/{name}: {e}")
+        elif filename_lower == "requirements.txt" and req_count < 3:
+            req_count += 1
+            if scanned_locally:
+                try:
+                    with open(os.path.join(local_path, path), "r", encoding="utf-8", errors="ignore") as f:
+                        req_text = f.read().lower()
+                        if "numpy" in req_text: detected_tech.add("numpy")
+                        if "pandas" in req_text: detected_tech.add("pandas")
+                        if "scikit-learn" in req_text or "sklearn" in req_text: detected_tech.add("scikit-learn")
+                        if "tensorflow" in req_text: detected_tech.add("tensorflow")
+                        if "torch" in req_text or "pytorch" in req_text: detected_tech.add("pytorch")
+                        if "xgboost" in req_text: detected_tech.add("xgboost")
+                        if "lightgbm" in req_text: detected_tech.add("lightgbm")
+                        if "catboost" in req_text: detected_tech.add("catboost")
+                        if "opencv-python" in req_text or "opencv" in req_text or "cv2" in req_text: detected_tech.add("opencv")
+                        if "matplotlib" in req_text: detected_tech.add("matplotlib")
+                        if "seaborn" in req_text: detected_tech.add("seaborn")
+                        if "flask" in req_text: detected_tech.add("flask")
+                        if "fastapi" in req_text: detected_tech.add("fastapi")
+                        if "firebase-admin" in req_text: detected_tech.add("firebase")
+                        if "boto3" in req_text: detected_tech.add("aws")
+                        if "jupyter" in req_text: detected_tech.add("jupyter")
+                        if "prefect" in req_text: detected_tech.add("prefect")
+                        if "evidently" in req_text: detected_tech.add("evidently")
+                        if "pytest" in req_text: detected_tech.add("pytest")
+                        if "scipy" in req_text: detected_tech.add("scipy")
+                except Exception as e:
+                    print(f"Error parsing local requirements.txt: {e}")
+            else:
+                raw_url = f"https://raw.githubusercontent.com/{owner}/{name}/{branch}/{path}"
+                try:
+                    req_res = requests.get(raw_url, timeout=5)
+                    if req_res.status_code == 200:
+                        req_text = req_res.text.lower()
+                        if "numpy" in req_text: detected_tech.add("numpy")
+                        if "pandas" in req_text: detected_tech.add("pandas")
+                        if "scikit-learn" in req_text or "sklearn" in req_text: detected_tech.add("scikit-learn")
+                        if "tensorflow" in req_text: detected_tech.add("tensorflow")
+                        if "torch" in req_text or "pytorch" in req_text: detected_tech.add("pytorch")
+                        if "xgboost" in req_text: detected_tech.add("xgboost")
+                        if "lightgbm" in req_text: detected_tech.add("lightgbm")
+                        if "catboost" in req_text: detected_tech.add("catboost")
+                        if "opencv-python" in req_text or "opencv" in req_text or "cv2" in req_text: detected_tech.add("opencv")
+                        if "matplotlib" in req_text: detected_tech.add("matplotlib")
+                        if "seaborn" in req_text: detected_tech.add("seaborn")
+                        if "flask" in req_text: detected_tech.add("flask")
+                        if "fastapi" in req_text: detected_tech.add("fastapi")
+                        if "firebase-admin" in req_text: detected_tech.add("firebase")
+                        if "boto3" in req_text: detected_tech.add("aws")
+                        if "jupyter" in req_text: detected_tech.add("jupyter")
+                        if "prefect" in req_text: detected_tech.add("prefect")
+                        if "evidently" in req_text: detected_tech.add("evidently")
+                        if "pytest" in req_text: detected_tech.add("pytest")
+                        if "scipy" in req_text: detected_tech.add("scipy")
+                except Exception as e:
+                    print(f"Error parsing requirements.txt in {owner}/{name}/{path}: {e}")
+                    
+        elif filename_lower == "cmakelists.txt" or filename_lower.endswith(".cmake"):
+            detected_tech.add("cmake")
+        elif filename_lower == "vercel.json":
+            detected_tech.add("vercel")
+        elif filename_lower.endswith(".ino") or filename_lower == "platformio.ini":
+            detected_tech.add("arduino")
+        elif filename_lower.endswith(".qmd") or filename_lower == "_quarto.yml":
+            detected_tech.add("quarto")
+        elif filename_lower.endswith(".tex"):
+            detected_tech.add("latex")
+        
+        # Extension-based language detection
+        if filename_lower.endswith((".py", ".ipynb")):
+            if filename_lower.endswith(".py"):
+                detected_tech.add("python")
+            else:
+                detected_tech.add("jupyter")
+        elif filename_lower.endswith((".cpp", ".cc", ".cxx", ".h", ".hpp")):
+            detected_tech.add("c++")
+        elif filename_lower.endswith(".c"):
+            detected_tech.add("c")
+        elif filename_lower.endswith((".r", ".rmd")):
+            detected_tech.add("r")
+        elif filename_lower.endswith((".js", ".jsx")):
+            detected_tech.add("javascript")
+        elif filename_lower.endswith((".ts", ".tsx")):
+            detected_tech.add("typescript")
+        elif filename_lower.endswith((".html", ".htm")):
+            detected_tech.add("html")
+        elif filename_lower.endswith(".css"):
+            detected_tech.add("css")
+        elif filename_lower.endswith(".sql"):
+            detected_tech.add("sql")
+        elif filename_lower == "makefile" or filename_lower == "gnumakefile" or filename_lower.endswith(".mk"):
+            detected_tech.add("makefile")
+        elif filename_lower == "dockerfile" or filename_lower.endswith(".dockerfile") or filename_lower in ("docker-compose.yml", "docker-compose.yaml"):
+            detected_tech.add("docker")
+        elif filename_lower.endswith(".java"):
+            detected_tech.add("java")
+        elif filename_lower.endswith(".go"):
+            detected_tech.add("go")
+        elif filename_lower.endswith(".rs"):
+            detected_tech.add("rust")
+        elif filename_lower.endswith((".sh", ".bash")):
+            detected_tech.add("shell")
 
 print(f"Scan complete. Detected technologies: {list(detected_tech)}")
 
@@ -438,7 +560,7 @@ SKILL_ICONS_MAPPING = {
     "python": "py", "c++": "cpp", "cplusplus": "cpp", "c": "c", "r": "r",
     "javascript": "js", "js": "js", "typescript": "ts", "ts": "ts",
     "html": "html", "html5": "html", "css": "css", "css3": "css",
-    "postgresql": "postgres", "postgres": "postgres", "sqlite": "sqlite", "mysql": "mysql",
+    "postgresql": "postgres", "postgres": "postgres", "sqlite": "sqlite", "mysql": "mysql", "sql": "mysql",
     "latex": "latex", "tex": "latex", "shell": "bash", "bash": "bash",
     "java": "java", "go": "go", "rust": "rust",
     "react": "react", "reactjs": "react", "next.js": "nextjs", "nextjs": "nextjs",
@@ -451,23 +573,56 @@ SKILL_ICONS_MAPPING = {
     "git": "git", "github": "github", "github actions": "githubactions", "docker": "docker", "cmake": "cmake"
 }
 
-ordered_skills = []
-for cat in ["languages", "frameworks", "ai_data_science", "cloud_db", "tools_devops"]:
-    for tech in CATEGORIES[cat]:
-        if tech in detected_tech:
-            skill_id = SKILL_ICONS_MAPPING.get(tech)
-            if skill_id and skill_id not in ordered_skills:
-                ordered_skills.append(skill_id)
+FALLBACK_ICONS = {
+    "quarto": "md",
+    "xgboost": "py",
+    "lightgbm": "py",
+    "catboost": "py",
+    "prefect": "py",
+    "evidently": "py",
+    "pytest": "py",
+    "makefile": "bash"
+}
 
-skills_str = ",".join(ordered_skills)
-badges_html = f"""<p align="center">
-  <img src="https://skillicons.dev/icons?i={skills_str}&perline=12" />
-</p>"""
+def generate_category_table(cat_keys):
+    cat_detected = []
+    seen_display_names = set()
+    
+    for key in cat_keys:
+        if key in detected_tech:
+            display_name = TECH_DISPLAY_NAMES.get(key, key.capitalize())
+            skill_id = SKILL_ICONS_MAPPING.get(key)
+            if not skill_id:
+                skill_id = FALLBACK_ICONS.get(key, "py")
+            if display_name not in seen_display_names:
+                seen_display_names.add(display_name)
+                cat_detected.append((key, skill_id, display_name))
+            
+    if not cat_detected:
+        return "<i>No technologies detected in this category yet.</i>"
+        
+    html = '<table>\n  <tr>\n'
+    cols_per_row = 8
+    
+    for i, (tech, skill_id, display_name) in enumerate(cat_detected):
+        if i > 0 and i % cols_per_row == 0:
+            html += '  </tr>\n  <tr>\n'
+            
+        html += f'''    <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i={skill_id}" width="48" height="48" alt="{display_name}" /><br/>
+      <sub><b>{display_name}</b></sub>
+    </td>\n'''
+        
+    html += '  </tr>\n</table>'
+    return html
 
-# Replace in README
-pattern_cat = r"<!-- START_SECTION:technologies -->.*?<!-- END_SECTION:technologies -->"
-replacement_cat = f"<!-- START_SECTION:technologies -->\n{badges_html}\n<!-- END_SECTION:technologies -->"
-readme_content = re.sub(pattern_cat, replacement_cat, readme_content, flags=re.DOTALL)
+# Generate and replace for each category
+for cat_name, cat_keys in CATEGORIES.items():
+    badges_html = generate_category_table(cat_keys)
+    
+    pattern_cat = f"<!-- START_SECTION:{cat_name} -->.*?<!-- END_SECTION:{cat_name} -->"
+    replacement_cat = f"<!-- START_SECTION:{cat_name} -->\n{badges_html}\n<!-- END_SECTION:{cat_name} -->"
+    readme_content = re.sub(pattern_cat, replacement_cat, readme_content, flags=re.DOTALL)
 
 with open("README.md", "w") as f:
     f.write(readme_content)
