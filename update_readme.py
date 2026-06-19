@@ -568,7 +568,7 @@ SKILL_ICONS_MAPPING = {
     "express": "express", "expressjs": "express", "tailwind css": "tailwind", "tailwind": "tailwind",
     "bootstrap": "bootstrap", "vite": "vite", "arduino": "arduino", "django": "django",
     "pytorch": "pytorch", "tensorflow": "tensorflow", "scikit-learn": "sklearn", "sklearn": "sklearn",
-    "numpy": "numpy", "pandas": "pandas", "opencv": "opencv", "jupyter": "jupyter", "jupyter notebook": "jupyter",
+    "opencv": "opencv",
     "firebase": "firebase", "aws": "aws", "vercel": "vercel", "mongodb": "mongodb", "heroku": "heroku",
     "git": "git", "github": "github", "github actions": "githubactions", "docker": "docker", "cmake": "cmake"
 }
@@ -581,7 +581,11 @@ FALLBACK_ICONS = {
     "prefect": "py",
     "evidently": "py",
     "pytest": "py",
-    "makefile": "bash"
+    "makefile": "bash",
+    "numpy": "py",
+    "pandas": "py",
+    "jupyter": "py",
+    "jupyter notebook": "py"
 }
 
 def generate_category_table(cat_keys):

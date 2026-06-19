@@ -179,11 +179,11 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>scikit-learn</b></sub>
     </td>
     <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=numpy" width="48" height="48" alt="NumPy" /><br/>
+      <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="NumPy" /><br/>
       <sub><b>NumPy</b></sub>
     </td>
     <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=pandas" width="48" height="48" alt="Pandas" /><br/>
+      <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="Pandas" /><br/>
       <sub><b>Pandas</b></sub>
     </td>
     <td align="center" width="96" valign="top">
@@ -195,7 +195,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>Seaborn</b></sub>
     </td>
     <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=jupyter" width="48" height="48" alt="Jupyter" /><br/>
+      <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="Jupyter" /><br/>
       <sub><b>Jupyter</b></sub>
     </td>
     <td align="center" width="96" valign="top">
