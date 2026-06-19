@@ -433,33 +433,41 @@ pattern_proj = r"<!-- START_SECTION:projects -->.*?<!-- END_SECTION:projects -->
 replacement_proj = f"<!-- START_SECTION:projects -->\n{projects_html}\n<!-- END_SECTION:projects -->"
 readme_content = re.sub(pattern_proj, replacement_proj, readme_content, flags=re.DOTALL)
 
-# Re-categorize and insert badges
-for cat_name, cat_keys in CATEGORIES.items():
-    cat_detected = []
-    # Find all detected tech keys that belong to this category
-    for key in sorted(list(detected_tech)):
-        if key in cat_keys and key in BADGE_MAPPING:
-            cat_detected.append(key)
-            
-    # Format HTML badges with uniform height=40
-    badges_html = ""
-    if cat_detected:
-        badges_html = '<p align="left">\n'
-        for i, key in enumerate(cat_detected):
-            badge_url = BADGE_MAPPING[key]
-            display_name = TECH_DISPLAY_NAMES.get(key, key.capitalize())
-            badges_html += f'  <img src="{badge_url}" alt="{display_name}" height="40" />\n'
-            # Split lines of badges beautifully
-            if (i + 1) % 5 == 0 and i < len(cat_detected) - 1:
-                badges_html += "  <br/>\n"
-        badges_html += "</p>"
-    else:
-        badges_html = "<i>No technologies detected in this category yet.</i>"
-        
-    # Replace in README
-    pattern_cat = f"<!-- START_SECTION:{cat_name} -->.*?<!-- END_SECTION:{cat_name} -->"
-    replacement_cat = f"<!-- START_SECTION:{cat_name} -->\n{badges_html}\n<!-- END_SECTION:{cat_name} -->"
-    readme_content = re.sub(pattern_cat, replacement_cat, readme_content, flags=re.DOTALL)
+# Re-categorize and insert badges using skillicons.dev (square icons)
+SKILL_ICONS_MAPPING = {
+    "python": "py", "c++": "cpp", "cplusplus": "cpp", "c": "c", "r": "r",
+    "javascript": "js", "js": "js", "typescript": "ts", "ts": "ts",
+    "html": "html", "html5": "html", "css": "css", "css3": "css",
+    "postgresql": "postgres", "postgres": "postgres", "sqlite": "sqlite", "mysql": "mysql",
+    "latex": "latex", "tex": "latex", "shell": "bash", "bash": "bash",
+    "java": "java", "go": "go", "rust": "rust",
+    "react": "react", "reactjs": "react", "next.js": "nextjs", "nextjs": "nextjs",
+    "node.js": "nodejs", "nodejs": "nodejs", "flask": "flask", "fastapi": "fastapi",
+    "express": "express", "expressjs": "express", "tailwind css": "tailwind", "tailwind": "tailwind",
+    "bootstrap": "bootstrap", "vite": "vite", "arduino": "arduino", "django": "django",
+    "pytorch": "pytorch", "tensorflow": "tensorflow", "scikit-learn": "sklearn", "sklearn": "sklearn",
+    "numpy": "numpy", "pandas": "pandas", "opencv": "opencv", "jupyter": "jupyter", "jupyter notebook": "jupyter",
+    "firebase": "firebase", "aws": "aws", "vercel": "vercel", "mongodb": "mongodb", "heroku": "heroku",
+    "git": "git", "github": "github", "github actions": "githubactions", "docker": "docker", "cmake": "cmake"
+}
+
+ordered_skills = []
+for cat in ["languages", "frameworks", "ai_data_science", "cloud_db", "tools_devops"]:
+    for tech in CATEGORIES[cat]:
+        if tech in detected_tech:
+            skill_id = SKILL_ICONS_MAPPING.get(tech)
+            if skill_id and skill_id not in ordered_skills:
+                ordered_skills.append(skill_id)
+
+skills_str = ",".join(ordered_skills)
+badges_html = f"""<p align="center">
+  <img src="https://skillicons.dev/icons?i={skills_str}&perline=12" />
+</p>"""
+
+# Replace in README
+pattern_cat = r"<!-- START_SECTION:technologies -->.*?<!-- END_SECTION:technologies -->"
+replacement_cat = f"<!-- START_SECTION:technologies -->\n{badges_html}\n<!-- END_SECTION:technologies -->"
+readme_content = re.sub(pattern_cat, replacement_cat, readme_content, flags=re.DOTALL)
 
 with open("README.md", "w") as f:
     f.write(readme_content)
