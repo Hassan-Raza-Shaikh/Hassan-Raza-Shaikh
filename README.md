@@ -64,18 +64,18 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
     <td width="50%" valign="top">
       <b>🤖 <a href="https://github.com/hamxa296/ML-Project-hehe">ML Project</a></b> <i>(Contributor)</i><br/>
       Collaborative machine learning pipeline implementing credit fraud detection and model ensemble comparisons.<br/>
-      <code>Python</code>
+      <code>HTML</code>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <b>🌱 <a href="https://github.com/ZainJ5/Plant-Growth-and-Harvesting-Monitoring-System">Plant Growth & Harvesting Monitoring System</a></b> <i>(Contributor)</i><br/>
       An IoT and computer vision monitoring system designed for tracking crop health metrics and harvesting cycles.<br/>
-      <code>Python</code>
+      <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
       <b>📁 <a href="https://github.com/Hassan-Raza-Shaikh/Projects">Projects</a></b><br/>
-      Academic software developments, data structures implementations, and core computational logic systems.<br/>
+      This contains large project files<br/>
       <code>C++</code>
     </td>
   </tr>
@@ -83,8 +83,8 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   <tr>
     <td colspan="2" valign="top">
       <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/Python">Python Utilities</a></b><br/>
-      A curated playground of Python implementations, scripting utilities, and numerical analysis models.<br/>
-      <code>Python</code>
+      Python codes<br/>
+      <code>Jupyter Notebook</code>
     </td>
   </tr>
 </table>
@@ -107,6 +107,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>C++</b></sub>
     </td>
     <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=r" width="48" height="48" alt="R" /><br/>
+      <sub><b>R</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" /><br/>
       <sub><b>JavaScript</b></sub>
     </td>
@@ -126,9 +130,19 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="SQL" /><br/>
       <sub><b>SQL</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=latex" width="48" height="48" alt="LaTeX" /><br/>
       <sub><b>LaTeX</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=bash" width="48" height="48" alt="Shell Script" /><br/>
+      <sub><b>Shell Script</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=bash" width="48" height="48" alt="Makefile" /><br/>
+      <sub><b>Makefile</b></sub>
     </td>
   </tr>
 </table>
@@ -159,6 +173,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>FastAPI</b></sub>
     </td>
     <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=express" width="48" height="48" alt="Express" /><br/>
+      <sub><b>Express</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind CSS" /><br/>
       <sub><b>Tailwind CSS</b></sub>
     </td>
@@ -174,6 +192,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
 <!-- START_SECTION:ai_data_science -->
 <table>
   <tr>
+    <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=pytorch" width="48" height="48" alt="PyTorch" /><br/>
+      <sub><b>PyTorch</b></sub>
+    </td>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=sklearn" width="48" height="48" alt="scikit-learn" /><br/>
       <sub><b>scikit-learn</b></sub>
@@ -202,12 +224,12 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="XGBoost" /><br/>
       <sub><b>XGBoost</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="LightGBM" /><br/>
       <sub><b>LightGBM</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="CatBoost" /><br/>
       <sub><b>CatBoost</b></sub>
