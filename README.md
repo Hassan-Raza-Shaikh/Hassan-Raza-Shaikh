@@ -197,6 +197,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>PyTorch</b></sub>
     </td>
     <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=tensorflow" width="48" height="48" alt="TensorFlow" /><br/>
+      <sub><b>TensorFlow</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=sklearn" width="48" height="48" alt="scikit-learn" /><br/>
       <sub><b>scikit-learn</b></sub>
     </td>
@@ -220,12 +224,12 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="Jupyter" /><br/>
       <sub><b>Jupyter</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="XGBoost" /><br/>
       <sub><b>XGBoost</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="LightGBM" /><br/>
       <sub><b>LightGBM</b></sub>
