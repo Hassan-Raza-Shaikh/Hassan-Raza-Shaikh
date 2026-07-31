@@ -227,6 +227,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   </tr>
   <tr>
     <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="SciPy" /><br/>
+      <sub><b>SciPy</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="Evidently" /><br/>
       <sub><b>Evidently</b></sub>
     </td>
