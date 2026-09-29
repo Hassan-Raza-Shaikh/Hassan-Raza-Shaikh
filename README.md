@@ -107,6 +107,10 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <sub><b>C++</b></sub>
     </td>
     <td align="center" width="96" valign="top">
+      <img src="https://skillicons.dev/icons?i=c" width="48" height="48" alt="C" /><br/>
+      <sub><b>C</b></sub>
+    </td>
+    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=r" width="48" height="48" alt="R" /><br/>
       <sub><b>R</b></sub>
     </td>
@@ -126,12 +130,12 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
       <img src="https://skillicons.dev/icons?i=css" width="48" height="48" alt="CSS3" /><br/>
       <sub><b>CSS3</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="SQL" /><br/>
       <sub><b>SQL</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=latex" width="48" height="48" alt="LaTeX" /><br/>
       <sub><b>LaTeX</b></sub>
