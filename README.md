@@ -58,7 +58,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   <tr>
     <td width="50%" valign="top">
       <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
-      Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
+      GIKI Course Hub: course resources by semester, course and instructor, with a Flask REST API backend.<br/>
       <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
@@ -75,7 +75,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
     </td>
     <td width="50%" valign="top">
       <b>📁 <a href="https://github.com/Hassan-Raza-Shaikh/Projects">Projects</a></b><br/>
-      This contains large project files<br/>
+      Early course projects for AI102, CS101, CS112 and ES111 (archived).<br/>
       <code>C++</code>
     </td>
   </tr>
@@ -83,7 +83,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   <tr>
     <td colspan="2" valign="top">
       <b>⚙️ <a href="https://github.com/Hassan-Raza-Shaikh/Python">Python Utilities</a></b><br/>
-      Python codes<br/>
+      Python coursework and utilities: numerical methods, linear algebra, ML notebooks and AI course labs.<br/>
       <code>Jupyter Notebook</code>
     </td>
   </tr>
