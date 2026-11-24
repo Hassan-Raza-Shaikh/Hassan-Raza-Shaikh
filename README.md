@@ -58,7 +58,7 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   <tr>
     <td width="50%" valign="top">
       <b>📚 <a href="https://github.com/Hassan-Raza-Shaikh/giki_course_hub-1">GIKI Course Hub</a></b><br/>
-      GIKI Course Hub: course resources by semester, course and instructor, with a Flask REST API backend.<br/>
+      Our university academic resource platform, providing course material sharing and management. Currently live and actively used.<br/>
       <code>JavaScript</code>
     </td>
     <td width="50%" valign="top">
@@ -133,10 +133,6 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
   </tr>
   <tr>
     <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="SQL" /><br/>
-      <sub><b>SQL</b></sub>
-    </td>
-    <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=latex" width="48" height="48" alt="LaTeX" /><br/>
       <sub><b>LaTeX</b></sub>
     </td>
@@ -167,10 +163,6 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="Node.js" /><br/>
       <sub><b>Node.js</b></sub>
-    </td>
-    <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=flask" width="48" height="48" alt="Flask" /><br/>
-      <sub><b>Flask</b></sub>
     </td>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=fastapi" width="48" height="48" alt="FastAPI" /><br/>
@@ -249,10 +241,6 @@ Hi! I'm Hassan, an Artificial Intelligence student and mathematics enthusiast. I
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=firebase" width="48" height="48" alt="Firebase" /><br/>
       <sub><b>Firebase</b></sub>
-    </td>
-    <td align="center" width="96" valign="top">
-      <img src="https://skillicons.dev/icons?i=aws" width="48" height="48" alt="AWS" /><br/>
-      <sub><b>AWS</b></sub>
     </td>
     <td align="center" width="96" valign="top">
       <img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" /><br/>
